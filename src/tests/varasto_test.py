@@ -68,7 +68,7 @@ class TestVarasto(unittest.TestCase):
     def test_saldon_tulostus(self):
         self.varasto.lisaa_varastoon(8)
 
-        # tulostaminen oikein
+        # tulostaminen toimii oikein
         self.assertAlmostEqual(self.varasto.__str__(), "saldo = 8, vielä tilaa 2")
 
     def test_virheellinen_tilavuus_alussa(self):
