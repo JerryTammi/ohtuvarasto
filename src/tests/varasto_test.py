@@ -20,7 +20,7 @@ class TestVarasto(unittest.TestCase):
 
         self.assertAlmostEqual(self.varasto.saldo, 8)
 
-    def test_lisays_lisaa_pienentaa_vapaata_tilaa(self):
+    def test_oikea_maara_vapaata_tilaa(self):
         self.varasto.lisaa_varastoon(8)
 
         # vapaata tilaa pitäisi vielä olla tilavuus-lisättävä määrä eli 2
@@ -69,7 +69,7 @@ class TestVarasto(unittest.TestCase):
         self.varasto.lisaa_varastoon(8)
 
         # tulostaminen toimii oikein
-        self.assertAlmostEqual(self.varasto.__str__(), "saldo = 8, vielä tilaa 2")
+        self.assertAlmostEqual(str(self.varasto), "saldo = 8, vielä tilaa 2")
 
     def test_virheellinen_tilavuus_alussa(self):
         self.assertAlmostEqual(self.virhevarasto.tilavuus, 0)
@@ -79,6 +79,6 @@ class TestVarasto(unittest.TestCase):
 
     def test_alku_saldo_pienempi_kuin_tilavuus(self):
         self.assertAlmostEqual(self.virhevarasto.saldo, self.virhevarasto.tilavuus)
-    
+
     def test_alku_saldo_suurempi_kuin_tilavuus(self):
         self.assertAlmostEqual(self.motivarasto.saldo, self.motivarasto.tilavuus)
