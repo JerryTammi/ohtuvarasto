@@ -15,14 +15,14 @@ class Varasto:
         else:
             # täyteen ja ylimäärä hukkaan!
             self.saldo = tilavuus
-        print("moti")
-        print("moti")
-        print("moti")
-        print("moti")
-        print("moti")
-        print("moti")
-        print("moti")
-        print("moti")
+        #print("moti")
+        #print("moti")
+        #print("moti")
+        #print("moti")
+        #print("moti")
+        #print("moti")
+        #print("moti")
+        #print("moti")
 
     # huom: ominaisuus voidaan myös laskea.
     def paljonko_mahtuu(self):
